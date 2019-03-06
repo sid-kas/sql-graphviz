@@ -1,0 +1,10 @@
+dash
+dash-html-components
+dash-core-components
+dash-table
+dash-daq
+dash-bootstrap-components
+plotly
+flask
+numpy
+pyzmq
