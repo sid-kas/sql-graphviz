@@ -3,7 +3,6 @@ import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 
-
 schema = dbc.Card(
     [
         dbc.CardColumns(
@@ -79,5 +78,18 @@ schema = dbc.Card(
     ],
     className="mt-3",
 
-    
+
 )
+
+
+collapse = html.Div([
+    dbc.Button("Open Schema", id="schema-button", className="mt-3"),
+    dbc.Collapse(
+        schema,
+        id="schema-collapse",
+    ),
+])
+
+
+
+

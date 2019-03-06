@@ -6,12 +6,18 @@ import dash_html_components as html
 import time, os, sys
 parent_folder_path = os.path.dirname( os.path.abspath(__file__)).split(r'src')[0]
 sys.path.append(parent_folder_path)
-from src.components.query_graph import query_graph
-from src.components.schema import schema
+from src.components.query_table import query_table
+from src.components.schema import schema, collapse
 
 tabs = dbc.Tabs(
     [
-        dbc.Tab(query_graph, label="GraphQuery"),
-        dbc.Tab(schema, label="Schema"),
+        dbc.Tab(
+            html.Div([
+                collapse,
+                query_table,
+            ]),
+            label="GraphQuery"
+        ),
+        dbc.Tab(schema, label="Other Stuff"),
     ]
 )

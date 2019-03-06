@@ -1,10 +1,17 @@
 import dash
+import dash_table
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output, State
 
-query_graph =  dbc.Card(
+import time, os, sys
+parent_folder_path = os.path.dirname( os.path.abspath(__file__)).split(r'src')[0]
+sys.path.append(parent_folder_path)
+
+from src.components.schema import schema
+
+query_table =  dbc.Card(
     [
         dbc.CardBody(
             [
@@ -13,22 +20,32 @@ query_graph =  dbc.Card(
                         dbc.Col(
                             [
                                 dbc.Textarea(
-                                    bs_size="lg", placeholder="Enter SQL Query", className="mb-2"
+                                    id= "query_input", bs_size="lg", placeholder="Enter SQL Query", className="mb-2"
                                 ),
-                                dbc.Button("Execute", id="execute-button", color="secondary"),
+                                dbc.Button("Execute", id="execute-button", color="secondary", className="mb-2"),
                                 dcc.Dropdown(
                                     id='dropdown-column-options',
-                                    multi=True
+                                    multi=True,
+                                    className="mb-2"
                                 ),
+                                dbc.Button(
+                                        "Plot graph", id="plot-button", color="secondary", className="mr-2"),
+                                    
                             ],
                             md=4,
                         ),
                         dbc.Col(
                             [
-                                html.H2("Graph"),
-                                dcc.Graph(
-                                    figure={"data": [{"x": [1, 2, 3], "y": [1, 4, 9]}]}
-                                ),
+                                dbc.Card([
+                                    dbc.CardHeader("Results"),
+                                    dbc.CardBody(
+                                        [
+                                            dbc.CardTitle("This is a title"),
+                                            dbc.CardText("And some text"),
+                                        ]
+                                    ),
+                                ])
+                                
                             ]
                         ),
                     ]
@@ -42,10 +59,3 @@ query_graph =  dbc.Card(
 )
 
 
-@app.callback(
-    dash.dependencies.Output('dropdown-column-options', 'options'),
-    [Input("execute-button", "n_clicks"), Input("input", "value")]
-)
-def update_date_dropdown(name):
-
-    return 
