@@ -3,13 +3,11 @@ import dash_table
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
-from dash.dependencies import Input, Output, State
 
 import time, os, sys
 parent_folder_path = os.path.dirname( os.path.abspath(__file__)).split(r'src')[0]
 sys.path.append(parent_folder_path)
 
-from src.components.schema import schema
 
 query_table =  dbc.Card(
     [
@@ -29,7 +27,7 @@ query_table =  dbc.Card(
                                     className="mb-2"
                                 ),
                                 dbc.Button(
-                                        "Plot graph", id="plot-button", color="secondary", className="mr-2"),
+                                        "Plot graph", id="plot-button", color="secondary", className="mb-2"),
                                     
                             ],
                             md=4,

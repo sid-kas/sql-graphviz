@@ -34,8 +34,11 @@ sqlite3.register_adapter(collections.OrderedDict, adapt_json)
 sqlite3.register_converter('JSON', convert_json)
 
 class SqliteDB():
-    def __init__(self,file_name,path):
-        self.file_path = path+"/"+file_name
+    def __init__(self,file_path):
+        if os.path.exists(file_path):
+            self.file_path = file_path
+        else:
+            print("path does not exists")
         self.shared_data = pd.DataFrame()
         self.schema = {}
 

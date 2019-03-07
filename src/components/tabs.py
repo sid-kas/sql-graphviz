@@ -7,17 +7,31 @@ import time, os, sys
 parent_folder_path = os.path.dirname( os.path.abspath(__file__)).split(r'src')[0]
 sys.path.append(parent_folder_path)
 from src.components.query_table import query_table
-from src.components.schema import schema, collapse
+
+collapse = html.Div([
+    
+])
 
 tabs = dbc.Tabs(
     [
+        
+        
+        dbc.Tab(html.Div([
+                dbc.Card(
+                id="schema",
+            ),
+        ]), label="Schema",tab_id = 'tab1'),
+
         dbc.Tab(
             html.Div([
-                collapse,
+
                 query_table,
             ]),
-            label="GraphQuery"
+            label="GraphQuery", tab_id='tab2'
         ),
-        dbc.Tab(schema, label="Other Stuff"),
-    ]
+        
+    ],
+    id="tabs"
 )
+
+
