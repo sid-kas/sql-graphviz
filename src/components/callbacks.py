@@ -89,9 +89,9 @@ def register_callbacks(app, sql_db):
 
 
     @app.callback(
-        Output(f"navbar-collapse", "is_open"),
-        [Input(f"navbar-toggler", "n_clicks")],
-        [State(f"navbar-collapse", "is_open")],
+        Output("navbar-collapse", "is_open"),
+        [Input("navbar-toggler", "n_clicks")],
+        [State("navbar-collapse", "is_open")],
     )
     def toggle_navbar_collapse(n, is_open):
         if n:
