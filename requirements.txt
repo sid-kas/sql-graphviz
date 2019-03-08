@@ -4,7 +4,10 @@ dash-core-components
 dash-table
 dash-daq
 dash-bootstrap-components
+sqlite3
 plotly
 flask
 numpy
 pyzmq
+pandas
+

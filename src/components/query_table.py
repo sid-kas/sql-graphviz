@@ -18,34 +18,30 @@ query_table =  dbc.Card(
                         dbc.Col(
                             [
                                 dbc.Textarea(
-                                    id= "query_input", bs_size="lg", placeholder="Enter SQL Query", className="mb-2"
+                                    id= "query_input", bs_size="lg", placeholder="Enter SQL Query", className="mb-2",
+                                    autoFocus=True, debounce=True,
                                 ),
-                                dbc.Button("Execute", id="execute-button", color="secondary", className="mb-2"),
-                                dcc.Dropdown(
-                                    id='dropdown-column-options',
-                                    multi=True,
-                                    className="mb-2"
-                                ),
-                                dbc.Button(
-                                        "Plot graph", id="plot-button", color="secondary", className="mb-2"),
-                                    
+                                dbc.Button("Execute", id="execute-button", color="secondary", className="mb-2 mr-2"),
+                                dbc.Button("Show Table", id="show-table-button", color="secondary", className="mb-2 mr-2"),
+                                html.Div(id="data-table",className="mt-2"),    
                             ],
-                            md=4,
+                            md=5,
                         ),
-                        dbc.Col(
-                            [
-                                dbc.Card([
-                                    dbc.CardHeader("Results"),
-                                    dbc.CardBody(
-                                        [
-                                            dbc.CardTitle("This is a title"),
-                                            dbc.CardText("And some text"),
-                                        ]
+                        dbc.Col([
+                            dbc.Row([
+                                dbc.Col([
+                                    dcc.Dropdown(
+                                        id='dropdown-column-options',
+                                        multi=True,
+                                        className="mb-2"
                                     ),
-                                ])
-                                
-                            ]
-                        ),
+                                ]),
+                                dbc.Col([
+                                    dbc.Button("Plot graph", id="plot-button", color="secondary", className="mb-2 ml-2")
+                                ], md=3),
+                            ],no_gutters=True,align="center"),
+                            html.Div(id="data-graph") 
+                        ]),
                     ]
                 ),
             ]

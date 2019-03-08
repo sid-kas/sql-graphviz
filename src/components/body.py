@@ -13,11 +13,3 @@ body = html.Div([
         tabs,
     )
 ]) 
-
-
-# dbc.Container(
-#     [
-#         tabs,
-#     ],
-#     className="mt-4",
-# )

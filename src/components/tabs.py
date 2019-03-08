@@ -14,8 +14,6 @@ collapse = html.Div([
 
 tabs = dbc.Tabs(
     [
-        
-        
         dbc.Tab(html.Div([
                 dbc.Card(
                 id="schema",
@@ -29,7 +27,6 @@ tabs = dbc.Tabs(
             ]),
             label="GraphQuery", tab_id='tab2'
         ),
-        
     ],
     id="tabs"
 )
