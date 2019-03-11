@@ -4,7 +4,6 @@
 /**.vscode
 /**.pyc
 **/__pycache__
-__pycache__
 *.sqlite
 *.sqlite-journal
 *.db

@@ -21,7 +21,7 @@ app.config.assets_external_path = ""
 app.config.assets_url_path = '/assets'
 
 app.title = "sql tool"
-app.layout = dbc.Container([navbar, body], style={"max-width": "90%"})
+app.layout = dbc.Container([navbar, body], style={"max-width": "80%"})
 
 
 if __name__ == "__main__":
