@@ -14,3 +14,8 @@
 2019-03-08 16:47:57,634 - Queries - INFO - select id,remotePWM,motorCurrent,feederCurrent from SensorData where motorCurrent>0 and sessionID=32
 2019-03-08 16:57:27,828 - Queries - INFO - select id,remotePWM,motorCurrent,feederCurrent from SensorData where motorCurrent>1 and sessionID=32
 2019-03-08 17:00:25,800 - Queries - INFO - select id,remotePWM,motorCurrent,feederCurrent from SensorData where motorCurrent>1 and sessionID=32
+2019-03-09 17:05:34,852 - Queries - INFO - select * from invoiceitems
+2019-03-09 17:05:50,733 - Queries - INFO - select * from invoice_items
+2019-03-09 17:08:40,992 - Queries - INFO - select * from tracks
+2019-03-09 22:08:45,875 - Queries - INFO - select * from tracks
+2019-03-09 22:11:09,662 - Queries - INFO - select * from tracks

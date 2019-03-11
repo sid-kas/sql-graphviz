@@ -1,3 +1,4 @@
+from flask import Flask
 import dash
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
@@ -10,10 +11,17 @@ from components.body import body
 from components.callbacks import register_callbacks
 from sql.sqlite_db import SqliteDB
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(__name__) #, external_stylesheets=[dbc.themes.BOOTSTRAP])
+
+app.css.config.serve_locally = True
+app.scripts.config.serve_locally = True
+app.config.assets_folder = 'assets'
+app.config.include_asset_files = True  
+app.config.assets_external_path = ""
+app.config.assets_url_path = '/assets'
+
 app.title = "sql tool"
 app.layout = dbc.Container([navbar, body], style={"max-width": "90%"})
-
 
 
 if __name__ == "__main__":
@@ -27,4 +35,6 @@ if __name__ == "__main__":
     sqlite_db = SqliteDB(args.file_path)
     sqlite_db.get_schema()
     register_callbacks(app,sqlite_db)
+    
     app.run_server(host=args.host, port=args.port, debug=args.debug)
+
