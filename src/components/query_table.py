@@ -17,13 +17,28 @@ query_table =  dbc.Card(
                     [
                         dbc.Col(
                             [
+                                dcc.Store(id="shared-data"),
+                                dcc.Store(id="shared-schema"),
                                 dbc.Textarea(
                                     id= "query_input", bs_size="lg", placeholder="Enter SQL Query", className="mb-2",
-                                    autoFocus=True, debounce=True,
+                                    autoFocus=True, debounce=True,value='',
                                 ),
-                                dbc.Button("Execute", id="execute-button", color="secondary", className="mb-2 mr-2"),
-                                dbc.Button("Show Table", id="show-table-button", color="secondary", className="mb-2 mr-2"),
-                                html.Div(id="data-table",className="mt-2"),    
+                                dbc.Row([
+                                    dbc.Col([
+                                        dbc.Button("Execute", id="execute-button", color="secondary", className="mb-2"),
+                                    ],width=3),
+                                    dbc.Col([
+                                        dcc.Checklist(
+                                            id="check-list",
+                                            options=[
+                                                {'label': 'Show Table', 'value': 'show-table'},
+                                            ],
+                                            values=['show-table'],
+                                            labelStyle={'display': 'inline-block'}
+                                        ),
+                                    ],width=3 ),
+                                ],no_gutters=True,align="center",justify='start'),
+                                
                             ],
                             md=5,
                         ),
@@ -40,7 +55,7 @@ query_table =  dbc.Card(
                                     dbc.Button("Plot graph", id="plot-button", color="secondary", className="mb-2 ml-2")
                                 ], md=3),
                             ],no_gutters=True,align="center"),
-                            html.Div(id="data-graph") 
+                             
                         ]),
                     ]
                 ),
@@ -48,7 +63,7 @@ query_table =  dbc.Card(
         ),
 
     ],
-    className="mt-3",
+    className="mt-3 mb-3",
     
 )
 

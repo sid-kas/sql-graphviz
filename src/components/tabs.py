@@ -24,6 +24,8 @@ tabs = dbc.Tabs(
             html.Div([
 
                 query_table,
+                html.Div(id="data-graph"),
+                html.Div(id="data-table",className="mt-2"), 
             ]),
             label="GraphQuery", tab_id='tab2'
         ),

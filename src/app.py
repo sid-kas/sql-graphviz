@@ -12,7 +12,7 @@ from sql.sqlite_db import SqliteDB
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 app.title = "sql tool"
-app.layout = dbc.Container([navbar, body], style={"max-width": "90%"})
+app.layout = dbc.Container([navbar, body], style={"max-width": "80%"})
 
 
 

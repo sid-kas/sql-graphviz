@@ -2,10 +2,20 @@ import sqlite3, json, io, os, sys, collections, time
 import numpy as np
 import pandas as pd
 
+
 parent_folder_path = os.path.dirname( os.path.abspath(__file__)).split(r'src')[0]
 sys.path.append(parent_folder_path)
 
 from src.sql.sqlite_sccripts import get_all_table_names
+from src.common.logging_service import getLogger
+
+logger = getLogger("sqlite_db")
+
+def dict_factory(cursor, row):
+    d = {}
+    for idx, col in enumerate(cursor.description):
+        d[col[0]] = row[idx]
+    return d
 
 def adapt_array(arr):
     out = io.BytesIO()
@@ -35,20 +45,25 @@ sqlite3.register_converter('JSON', convert_json)
 
 class SqliteDB():
     def __init__(self,file_path):
-        if os.path.exists(file_path):
-            self.file_path = file_path
-        else:
-            print("path does not exists")
-        self.shared_data = pd.DataFrame()
-        self.schema = {}
+        try:
+            if os.path.exists(file_path):
+                self.file_path = file_path
+                logger.info("db path: "+self.file_path)
+            else:
+                logger.info("path does not exists")
+            self.schema = {}
+        except:
+            logger.exception("SqliteDb>>init")
 
-    def connect(self):
+    def connect(self,dict_factory = False):
         db  = sqlite3.connect(self.file_path, detect_types=sqlite3.PARSE_DECLTYPES)
+        if dict_factory:
+            db.row_factory = lambda c, r: dict(zip([col[0] for col in c.description], r))
         cur = db.cursor()
         return db,cur
 
     def get_schema(self):
-        db, cur = self.connect()
+        _, cur = self.connect()
         table_names = cur.execute(get_all_table_names).fetchall()
         for (table_name,) in table_names:
             result = cur.execute("PRAGMA table_info('%s')" % table_name).fetchall()
@@ -56,22 +71,25 @@ class SqliteDB():
         return dict(self.schema)
     
     def excecutescript(self,script):
+        dict_data = {}
         try:
             if script and type(script)==str:
-                db, cur = self.connect()
-                data = pd.read_sql_query(script,db)
-                self.shared_data = data
-            else:
-                self.shared_data = pd.DataFrame()
+                _, cur = self.connect()
+                data = np.array(cur.execute(script).fetchall())
+                dict_data = {description[0]:data[:,i] for i,description in enumerate(cur.description)}
+                logger.info("data len: "+str(len(dict_data))+", keys: "+str((dict_data.keys())))
         except:
-            self.shared_data = pd.DataFrame()
+            logger.exception("from>>excecutescript")
         finally:
-            return self.shared_data
+            return dict_data
 
-
+script = """
+SELECT motorCurrent, feederCurrent, remotePWM,outputPWM,inputVC,motorControlDesired,depth
+FROM SensorData where motorCurrent>0;
+"""
 
 
 if __name__ == '__main__':
-    sqlite_db = SqliteDB('test.sqlite',parent_folder_path)
+    sqlite_db = SqliteDB(parent_folder_path+'SensorData.sqlite')
     schema = sqlite_db.get_schema()
-    print(sqlite_db.excecutescript("bku"))
+    sqlite_db.excecutescript(script)
