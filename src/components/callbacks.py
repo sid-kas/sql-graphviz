@@ -197,7 +197,7 @@ def generate_table(head,contents):
     table = dbc.Table([
                 html.Thead(html.Tr([html.Th(h) for h in head])),
                 html.Tbody([html.Tr([html.Td(cont) for cont in content]) for content in contents]),
-            ], bordered=True)
+            ],bordered=True,hover=True,responsive=True,striped=True,)
 
     return table
 

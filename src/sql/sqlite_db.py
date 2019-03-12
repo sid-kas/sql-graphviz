@@ -55,10 +55,8 @@ class SqliteDB():
         except:
             logger.exception("SqliteDb>>init")
 
-    def connect(self,dict_factory = False):
+    def connect(self):
         db  = sqlite3.connect(self.file_path, detect_types=sqlite3.PARSE_DECLTYPES)
-        if dict_factory:
-            db.row_factory = lambda c, r: dict(zip([col[0] for col in c.description], r))
         cur = db.cursor()
         return db,cur
 
