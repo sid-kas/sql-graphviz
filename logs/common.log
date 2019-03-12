@@ -5,3 +5,562 @@
 2019-03-12 09:41:45,973 - sqlite_db - INFO - db path: SensorData.sqlite
 2019-03-12 09:42:10,567 - sqlite_db - INFO - db path: SensorData.sqlite
 2019-03-12 09:43:45,147 - sqlite_db - INFO - db path: C:\Users\siddhartha\Downloads\SensorData.sqlite
+2019-03-12 11:06:04,946 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:07:20,573 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:07:21,169 - Queries - INFO - select depth,inputVC from SensorData
+2019-03-12 11:07:21,755 - sqlite_db - INFO - data len: 2, keys: dict_keys(['depth', 'inputVC'])
+2019-03-12 11:07:24,687 - Queries - INFO - select depth,inputVC from SensorData
+2019-03-12 11:07:25,312 - sqlite_db - INFO - data len: 2, keys: dict_keys(['depth', 'inputVC'])
+2019-03-12 11:07:54,739 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:07:58,449 - Queries - INFO - select depth,inputVC from SensorData
+2019-03-12 11:07:59,265 - sqlite_db - INFO - data len: 2, keys: dict_keys(['depth', 'inputVC'])
+2019-03-12 11:08:04,843 - Queries - INFO - select depth,inputVC from SensorData
+2019-03-12 11:08:05,408 - sqlite_db - INFO - data len: 2, keys: dict_keys(['depth', 'inputVC'])
+2019-03-12 11:08:18,984 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:08:19,685 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:08:50,147 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:08:50,746 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:09:26,598 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:09:27,214 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:09:31,491 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:09:32,075 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:09:39,434 - Queries - INFO - select deh,inputVC,feederCurrent from SensorData
+2019-03-12 11:09:39,436 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: deh
+2019-03-12 11:09:51,294 - Queries - INFO - select deh,inputVC,feederCurrent from SensorData
+2019-03-12 11:09:51,296 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: deh
+2019-03-12 11:10:26,963 - Queries - INFO - select deh,inputVC,feederCurrent from SensorData
+2019-03-12 11:10:26,966 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: deh
+2019-03-12 11:10:43,171 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:10:47,842 - Queries - INFO - select deh,inputVC,feederCurrent from SensorData
+2019-03-12 11:10:47,849 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: deh
+2019-03-12 11:10:47,857 - Queries - INFO - select deh,inputVC,feederCurrent from SensorData
+2019-03-12 11:10:47,865 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: deh
+2019-03-12 11:10:54,621 - Queries - INFO - select deh,inputVC,feederCurrent from SensorData
+2019-03-12 11:10:54,623 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: deh
+2019-03-12 11:11:11,478 - Queries - INFO - select deh,inputVC,feederCurrent from SensorData
+2019-03-12 11:11:11,482 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: deh
+2019-03-12 11:11:12,342 - Queries - INFO - select deh,inputVC,feederCurrent from SensorData
+2019-03-12 11:11:12,367 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: deh
+2019-03-12 11:12:17,764 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:12:21,915 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:12:26,635 - Queries - INFO - select deh,inputVC,feederCurrent from SensorData
+2019-03-12 11:12:26,638 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: deh
+2019-03-12 11:12:37,095 - Queries - INFO - select deh,inputVC,feederCurrent from SensorData
+2019-03-12 11:12:37,097 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: deh
+2019-03-12 11:12:48,627 - Queries - INFO - select deh,inputVC,feederCurrent from SensorData
+2019-03-12 11:12:48,629 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: deh
+2019-03-12 11:12:52,623 - Queries - INFO - select deh,inputVC,feederCurrent from SensorData
+2019-03-12 11:12:52,626 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: deh
+2019-03-12 11:12:53,344 - Queries - INFO - select deh,inputVC,feederCurrent from SensorData
+2019-03-12 11:12:53,345 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: deh
+2019-03-12 11:12:58,644 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:12:58,724 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:13:00,085 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:13:00,672 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:15:50,204 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:16:26,203 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:16:30,025 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:16:34,233 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:16:35,241 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:16:51,533 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:16:52,593 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:17:01,554 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:17:02,211 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:17:08,948 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:17:09,962 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:17:19,960 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:17:20,723 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:17:25,735 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:17:26,542 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:17:39,676 - Queries - INFO - select depth,inputVC,feederCurrent from SensorDa
+2019-03-12 11:17:39,678 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such table: SensorDa
+2019-03-12 11:17:51,734 - Queries - INFO - select depth,inputVC,feederCurrent from SensorDa
+2019-03-12 11:17:51,735 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such table: SensorDa
+2019-03-12 11:17:52,724 - Queries - INFO - select depth,inputVC,feederCurrent from SensorDa
+2019-03-12 11:17:52,726 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such table: SensorDa
+2019-03-12 11:17:54,775 - Queries - INFO - select depth,inputVC,feederCurrent from SensorDa
+2019-03-12 11:17:54,776 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such table: SensorDa
+2019-03-12 11:17:55,899 - Queries - INFO - select depth,inputVC,feederCurrent from SensorDa
+2019-03-12 11:17:55,901 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such table: SensorDa
+2019-03-12 11:17:56,948 - Queries - INFO - select depth,inputVC,feederCurrent from SensorDa
+2019-03-12 11:17:56,951 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such table: SensorDa
+2019-03-12 11:18:00,975 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:18:02,022 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:29:27,578 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:29:31,501 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:30:03,007 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:31:55,879 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:31:59,449 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:32:01,573 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:32:02,534 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:32:14,388 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:32:15,203 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:32:15,460 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:32:16,261 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:32:30,252 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:32:30,940 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:33:01,849 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:33:02,488 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:33:13,293 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:33:17,595 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:33:18,287 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:33:37,276 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:33:38,118 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:33:44,520 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:33:51,330 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:33:51,920 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:33:59,521 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:34:00,270 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:34:21,676 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:34:25,206 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:34:28,458 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:34:29,656 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:35:15,376 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:35:41,928 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:35:42,948 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:36:35,176 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:36:38,372 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:36:44,794 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:36:45,408 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:37:50,044 - Queries - INFO - select depth,inputVC,feederCurrent from SensorData
+2019-03-12 11:37:50,866 - sqlite_db - INFO - data len: 3, keys: dict_keys(['depth', 'inputVC', 'feederCurrent'])
+2019-03-12 11:38:38,867 - Queries - INFO - select inputVC,feederCurrent from SensorData
+2019-03-12 11:38:39,638 - sqlite_db - INFO - data len: 2, keys: dict_keys(['inputVC', 'feederCurrent'])
+2019-03-12 11:41:43,534 - Queries - INFO - select inputVC,feederCurrent from SensorData
+2019-03-12 11:41:44,316 - sqlite_db - INFO - data len: 2, keys: dict_keys(['inputVC', 'feederCurrent'])
+2019-03-12 11:42:20,859 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:42:25,426 - Queries - INFO - select inputVC,feederCurrent from SensorData
+2019-03-12 11:42:26,281 - sqlite_db - INFO - data len: 2, keys: dict_keys(['inputVC', 'feederCurrent'])
+2019-03-12 11:42:26,918 - Queries - INFO - select inputVC,feederCurrent from SensorData
+2019-03-12 11:42:27,721 - sqlite_db - INFO - data len: 2, keys: dict_keys(['inputVC', 'feederCurrent'])
+2019-03-12 11:44:00,516 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:52:47,192 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:52:51,304 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:53:15,325 - Queries - INFO - select inputVC,feederCurrent from SensorData
+2019-03-12 11:53:15,927 - sqlite_db - INFO - data len: 2, keys: dict_keys(['inputVC', 'feederCurrent'])
+2019-03-12 11:55:14,677 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:55:51,717 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:56:02,711 - Queries - INFO - select inputVC,feederCurrent from SensorData
+2019-03-12 11:56:03,566 - sqlite_db - INFO - data len: 2, keys: dict_keys(['inputVC', 'feederCurrent'])
+2019-03-12 11:57:11,490 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:57:26,825 - Queries - INFO - select intVC,feederCurrent from SensorData
+2019-03-12 11:57:26,827 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: intVC
+2019-03-12 11:59:28,375 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 11:59:31,886 - Queries - INFO - select intVC,feederCurrent from SensorData
+2019-03-12 11:59:31,890 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: intVC
+2019-03-12 12:00:18,282 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:01:46,619 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:02:56,039 - Queries - INFO - select inputVC,feederCurrent from SensorData
+2019-03-12 12:02:56,615 - sqlite_db - INFO - data len: 2, keys: dict_keys(['inputVC', 'feederCurrent'])
+2019-03-12 12:04:05,288 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:05:20,705 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:06:35,705 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:06:39,393 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:07:27,943 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:07:50,925 - Queries - INFO - select inputVC,feederCurrent from SensorData
+2019-03-12 12:07:51,832 - sqlite_db - INFO - data len: 2, keys: dict_keys(['inputVC', 'feederCurrent'])
+2019-03-12 12:08:13,043 - Queries - INFO - select feederCurrent,inputVC,feederCurrent from SensorData
+2019-03-12 12:08:13,828 - sqlite_db - INFO - data len: 2, keys: dict_keys(['feederCurrent', 'inputVC'])
+2019-03-12 12:08:34,283 - Queries - INFO - select motorCurrent,inputVC,feederCurrent from SensorData
+2019-03-12 12:08:34,959 - sqlite_db - INFO - data len: 3, keys: dict_keys(['motorCurrent', 'inputVC', 'feederCurrent'])
+2019-03-12 12:08:45,336 - Queries - INFO - select motorCurrent,inputVC,feederCurrent from SensorData
+2019-03-12 12:08:46,233 - sqlite_db - INFO - data len: 3, keys: dict_keys(['motorCurrent', 'inputVC', 'feederCurrent'])
+2019-03-12 12:08:53,628 - Queries - INFO - select morCurrent,inputVC,feederCurrent from SensorData
+2019-03-12 12:08:53,629 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: morCurrent
+2019-03-12 12:09:18,094 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:09:22,807 - Queries - INFO - select morCurrent,inputVC,feederCurrent from SensorData
+2019-03-12 12:09:22,809 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: morCurrent
+2019-03-12 12:09:22,811 - callbacks - ERROR - update_shared_data
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 55, in update_shared_data
+    update_input(invalid=True)
+  File "C:\Users\siddh\Miniconda3\lib\site-packages\dash\dash.py", line 969, in add_context
+    output_value = func(*args, **kwargs)
+TypeError: update_input() got an unexpected keyword argument 'invalid'
+2019-03-12 12:09:47,354 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:09:49,710 - Queries - INFO - select morCurrent,inputVC,feederCurrent from SensorData
+2019-03-12 12:09:49,713 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such column: morCurrent
+2019-03-12 12:10:25,928 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:11:31,140 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:11:34,708 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:12:28,055 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:12:32,080 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:12:53,013 - Queries - INFO - select motorCurrent,inputVC,feederCurrent from SensorData
+2019-03-12 12:12:53,628 - sqlite_db - INFO - data len: 3, keys: dict_keys(['motorCurrent', 'inputVC', 'feederCurrent'])
+2019-03-12 12:14:22,922 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:14:48,854 - Queries - INFO - select sessionID,depth, outputPWM,motorCurrent,inputVC,feederCurrent from SensorData where motorCurrent>0 and inputVC >0;
+2019-03-12 12:14:49,496 - sqlite_db - INFO - data len: 6, keys: dict_keys(['sessionID', 'depth', 'outputPWM', 'motorCurrent', 'inputVC', 'feederCurrent'])
+2019-03-12 12:16:09,125 - Queries - INFO - select sessionID, outputPWM,motorCurrent,inputVC,feederCurrent from SensorData where motorCurrent>0 and inputVC >0;
+2019-03-12 12:16:09,688 - sqlite_db - INFO - data len: 5, keys: dict_keys(['sessionID', 'outputPWM', 'motorCurrent', 'inputVC', 'feederCurrent'])
+2019-03-12 12:16:59,785 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:17:07,963 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 12:17:19,431 - Queries - INFO - select sessionID, outputPWM,motorCurrent,inputVC,feederCurrent from SensorData where motorCurrent>0 and inputVC >0;
+2019-03-12 12:17:20,091 - sqlite_db - INFO - data len: 5, keys: dict_keys(['sessionID', 'outputPWM', 'motorCurrent', 'inputVC', 'feederCurrent'])
+2019-03-12 12:24:42,804 - sqlite_db - INFO - db path: C:\Users\siddhartha\Downloads\SensorData.sqlite
+2019-03-12 12:25:48,701 - Queries - INFO - select * from Sessions
+2019-03-12 12:25:48,704 - sqlite_db - INFO - data len: 5, keys: dict_keys(['sessionID', 'timeStamp', 'drillSetupID', 'materialID', 'bufferID'])
+2019-03-12 12:27:45,560 - Queries - INFO - select * from Sessions
+2019-03-12 12:27:45,562 - sqlite_db - INFO - data len: 5, keys: dict_keys(['sessionID', 'timeStamp', 'drillSetupID', 'materialID', 'bufferID'])
+2019-03-12 12:30:05,414 - Queries - INFO - select * from SensorData
+2019-03-12 12:30:37,561 - sqlite_db - INFO - data len: 16, keys: dict_keys(['id', 'timeStamp', 'sessionID', 'remotePWM', 'motorCurrent', 'feederCurrent', 'outputPWM', 'inputVC', 'motorControlDesired', 'pcbTemperature', 'feederTemperatureLow', 'feederTemperatureHigh', 'manualPWM', 'depth', 'depthList', 'acc'])
+2019-03-12 12:32:12,898 - Queries - INFO - select depth,inputVC from SensorData
+2019-03-12 12:32:13,765 - sqlite_db - INFO - data len: 2, keys: dict_keys(['depth', 'inputVC'])
+2019-03-12 13:49:11,374 - sqlite_db - INFO - db path: C:\Users\siddhartha\Downloads\SensorData.sqlite
+2019-03-12 13:50:05,049 - sqlite_db - INFO - db path: C:\Users\siddhartha\Downloads\SensorData.sqlite
+2019-03-12 13:50:08,436 - sqlite_db - INFO - db path: C:\Users\siddhartha\Downloads\SensorData.sqlite
+2019-03-12 13:51:32,203 - sqlite_db - INFO - db path: C:\Users\siddhartha\Downloads\SensorData.sqlite
+2019-03-12 13:51:35,493 - sqlite_db - INFO - db path: C:\Users\siddhartha\Downloads\SensorData.sqlite
+2019-03-12 13:52:26,459 - sqlite_db - INFO - db path: C:\Users\siddhartha\Downloads\SensorData.sqlite
+2019-03-12 13:55:26,312 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 13:55:30,039 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 13:55:39,787 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 13:56:07,953 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 13:56:32,615 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 13:56:48,208 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 14:01:31,877 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 14:01:35,714 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 14:02:42,907 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 14:03:07,459 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 14:03:52,933 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 14:05:47,189 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 14:07:14,443 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 14:08:29,075 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:04:00,178 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:22:10,028 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:22:13,626 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:23:53,701 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:24:24,679 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:25:26,047 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:29:15,078 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:29:29,012 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:30:23,172 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:30:26,412 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:31:58,942 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:38:40,699 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:39:03,437 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:39:27,098 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:40:58,494 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:41:21,989 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:41:25,265 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:42:34,932 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:43:45,733 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:45:32,551 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:45:35,695 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:48:40,278 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:56:28,989 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:56:32,338 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:57:14,982 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:57:29,160 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:57:43,688 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:58:05,662 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 15:58:24,907 - sqlite_db - INFO - data len: 4, keys: dict_keys(['id', 'remotePWM', 'motorCurrent', 'feederCurrent'])
+2019-03-12 16:08:55,255 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:09:05,042 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:11:27,413 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:11:30,773 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:12:41,495 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:14:19,140 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:15:50,952 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:17:02,255 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:17:16,075 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:17:32,225 - sqlite_db - INFO - data len: 4, keys: dict_keys(['id', 'remotePWM', 'motorCurrent', 'feederCurrent'])
+2019-03-12 16:19:53,108 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:20:30,773 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: near "b": syntax error
+2019-03-12 16:20:37,310 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: near "b": syntax error
+2019-03-12 16:20:45,807 - sqlite_db - INFO - data len: 4, keys: dict_keys(['id', 'remotePWM', 'motorCurrent', 'feederCurrent'])
+2019-03-12 16:21:30,078 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:21:33,239 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:23:27,121 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:23:30,349 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:25:00,313 - sqlite_db - INFO - data len: 3, keys: dict_keys(['sessionID', 'count', 'timeStamp'])
+2019-03-12 16:27:40,180 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:27:43,638 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:27:45,263 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,268 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,269 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,271 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,272 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,273 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,274 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,275 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,275 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,276 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,278 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,279 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,280 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,281 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,282 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,284 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:27:45,285 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(query.decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:42,354 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:28:43,264 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,265 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,266 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,267 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,268 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,269 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,270 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,271 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,272 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,273 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,273 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,274 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,275 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,276 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,277 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,280 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:28:43,281 - callbacks - ERROR - query_history
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\components\callbacks.py", line 129, in get_query_history
+    queries.add(str(query).decode())
+AttributeError: 'str' object has no attribute 'decode'
+2019-03-12 16:35:15,320 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:35:18,538 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:36:05,680 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:37:00,379 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: unrecognized token: "\"
+2019-03-12 16:38:58,440 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:40:22,632 - sqlite_db - INFO - data len: 3, keys: dict_keys(['sessionID', 'count', 'timeStamp'])
+2019-03-12 16:41:20,526 - sqlite_db - INFO - db path: SensorData.sqlite
+2019-03-12 16:43:51,535 - sqlite_db - INFO - data len: 3, keys: dict_keys(['sessionID', 'count', 'timeStamp'])
+2019-03-12 16:43:57,249 - sqlite_db - INFO - data len: 4, keys: dict_keys(['id', 'remotePWM', 'motorCurrent', 'feederCurrent'])
+2019-03-12 16:44:29,117 - sqlite_db - INFO - data len: 4, keys: dict_keys(['id', 'remotePWM', 'motorCurrent', 'feederCurrent'])

@@ -7,3 +7,4 @@
 *.sqlite
 *.sqlite-journal
 *.db
+.vscode/settings.json

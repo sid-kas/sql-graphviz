@@ -9,6 +9,7 @@ sys.path.append(parent_folder_path)
 from src.components.tabs import tabs
 
 body = html.Div([
+    dcc.Location(id='url', refresh=False),
     dbc.Col(
         tabs,
     )

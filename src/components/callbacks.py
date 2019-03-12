@@ -14,26 +14,23 @@ sys.path.append(parent_folder_path)
 
 from src.common.logging_service import getLogger
 
-querry_logger = getLogger("Queries")
+querry_logger = getLogger("Queries","queries.log")
 logger = getLogger("callbacks")
 
 def register_callbacks(app, sql_db):
 
+   
     @app.callback(
         Output('shared-data', 'data'),
-        [Input("execute-button", "n_clicks"),
-         Input("execute-button", "n_clicks_timestamp"),
-         Input("query_input", "n_clicks"),
-         Input("query_input", "value"),]
+        [Input("execute-button", "n_clicks")],
+        [State("query_input", "value")],
     )
-    def update_shared_data(n_clicks_button, ts,n_clicks_input, value):
-        if n_clicks_button and n_clicks_input:
-            if str(int(time.time())) == str(ts)[:-3]:
-                querry_logger.info(str(value))
-                data = sql_db.excecutescript(value)
-                return data
-            else:
-                raise PreventUpdate
+    def update_shared_data(n_clicks, input_value):
+        if n_clicks and input_value:
+            if len(input_value)>0:
+                querry_logger.info(str(input_value).encode())
+            data = sql_db.excecutescript(input_value)                
+            return data
         else:
             raise PreventUpdate
 
@@ -61,20 +58,17 @@ def register_callbacks(app, sql_db):
            
     @app.callback(
         Output('data-graph', 'children'),
-        [Input("plot-button", "n_clicks"),
-         Input("plot-button", "n_clicks_timestamp"),
-         Input("dropdown-column-options", "value"),
-         Input("shared-data","data")]
+        [Input("plot-button", "n_clicks")],
+        [State("dropdown-column-options", "value"),
+         State("shared-data","data")]
     )
-    def update_graph(n_clicks, ts, value, data):
+    def update_graph(n_clicks, value, data):
         if n_clicks and data:
-            if str(int(time.time())) == str(ts)[:-3]:
-                card = dbc.Card([
-                            dbc.CardHeader("Graph view"),
-                            dcc.Graph(figure=generate_graph(data,value)),
-                        ])
-                return card
-
+            card = dbc.Card([
+                        dbc.CardHeader("Graph view"),
+                        dcc.Graph(figure=generate_graph(data,value)),
+                    ])
+            return card
         else:
             raise PreventUpdate
         
@@ -89,20 +83,20 @@ def register_callbacks(app, sql_db):
             if "show-table" in val:
                 df = pd.DataFrame(data=data,columns=data.keys())
                 table = dash_table.DataTable(
-                            data=df.to_dict("rows"),
-                            columns=[{'id': c, 'name': c, "deletable": True} for c in data.keys()],
-                            n_fixed_rows=1,
-                            filtering=True,
-                            sorting=True,
-                            style_cell={'textAlign': 'left'},
-                            style_header={
-                                'backgroundColor': 'white',
-                                'fontWeight': 'bold'
-                            },
-                            style_table={'maxHeight': '500px',},
-                            # style_cell={'padding': '5px'},
-                            # style_as_list_view=True,
-                        )
+                    data=df.to_dict("rows"),
+                    columns=[{'id': c, 'name': c, "deletable": True} for c in data.keys()],
+                    n_fixed_rows=1,
+                    filtering=True,
+                    sorting=True,
+                    style_cell={'textAlign': 'left'},
+                    style_header={
+                        'backgroundColor': 'white',
+                        'fontWeight': 'bold'
+                    },
+                    style_table={'maxHeight': '500px',},
+                    # style_cell={'padding': '5px'},
+                    # style_as_list_view=True,
+                )
                 card = dbc.Card([dbc.CardHeader("Table View"),dbc.CardBody(table)],className="mt-3 mb-3")
                 return card
             else:
@@ -121,6 +115,38 @@ def register_callbacks(app, sql_db):
         if n:
             return not is_open
         return is_open
+
+    @app.callback(Output("shared-query-history","data"), [Input('url', 'pathname')])
+    def get_query_history(path_name):
+        if path_name=="/":
+            queries = set()
+            logs_file_path = parent_folder_path+"logs/queries.log"
+            with open(logs_file_path,mode='r') as f:
+                lines = f.readlines()
+                for line in lines:
+                    query = line.split(' - ')[-1]
+                    queries.add(query.replace("'\n",'').replace(r"\n",'').replace("b\'",'').replace("\\",''))
+                l = [{'label':query,'value':query} for query in queries]
+            return l
+        else:
+            raise PreventUpdate
+
+    @app.callback(
+        Output("query_input", "value"), 
+        [Input('dropdown-query-history', 'value')])
+    def update_query_input_from_dropdown(value):
+        if value:
+            return value
+        else:
+            raise PreventUpdate
+
+    @app.callback(
+        Output('dropdown-query-history', 'options'),
+        [Input("shared-query-history","data")]
+    )
+    def update_query_history(queries):
+        if queries:
+            return queries
 
 
     @app.callback(Output("schema", "children"), [Input("tabs", "active_tab")])

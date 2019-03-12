@@ -8,7 +8,6 @@ import time, os, sys
 parent_folder_path = os.path.dirname( os.path.abspath(__file__)).split(r'src')[0]
 sys.path.append(parent_folder_path)
 
-
 query_table =  dbc.Card(
     [
         dbc.CardBody(
@@ -17,12 +16,13 @@ query_table =  dbc.Card(
                     [
                         dbc.Col(
                             [
+                                dcc.Store(id="shared-query-history"),
                                 dcc.Store(id="shared-data"),
-                                dcc.Store(id="shared-schema"),
                                 dbc.Textarea(
                                     id= "query_input", bs_size="lg", placeholder="Enter SQL Query", className="mb-2",
                                     autoFocus=True, debounce=True,value='',
                                 ),
+                                
                                 dbc.Row([
                                     dbc.Col([
                                         dbc.Button("Execute", id="execute-button", color="secondary", className="mb-2"),
@@ -38,11 +38,18 @@ query_table =  dbc.Card(
                                         ),
                                     ],width=3 ),
                                 ],no_gutters=True,align="center",justify='start'),
-                                
+                                                                
                             ],
                             md=5,
                         ),
                         dbc.Col([
+                            html.Div([
+                                dcc.Dropdown(
+                                    id='dropdown-query-history',
+                                    className="mb-2",
+                                    placeholder="Load query from preloads/history",
+                                ),
+                            ]),
                             dbc.Row([
                                 dbc.Col([
                                     dcc.Dropdown(
@@ -55,7 +62,7 @@ query_table =  dbc.Card(
                                     dbc.Button("Plot graph", id="plot-button", color="secondary", className="mb-2 ml-2")
                                 ], md=3),
                             ],no_gutters=True,align="center"),
-                             
+
                         ]),
                     ]
                 ),

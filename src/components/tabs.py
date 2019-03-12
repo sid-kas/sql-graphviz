@@ -30,7 +30,8 @@ tabs = dbc.Tabs(
             label="GraphQuery", tab_id='tab2'
         ),
     ],
-    id="tabs"
+    id="tabs",
+    active_tab="tab2",
 )
 
 
