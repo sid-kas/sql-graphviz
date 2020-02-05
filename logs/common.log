@@ -564,3 +564,18 @@ sqlite3.OperationalError: unrecognized token: "\"
 2019-03-12 16:43:51,535 - sqlite_db - INFO - data len: 3, keys: dict_keys(['sessionID', 'count', 'timeStamp'])
 2019-03-12 16:43:57,249 - sqlite_db - INFO - data len: 4, keys: dict_keys(['id', 'remotePWM', 'motorCurrent', 'feederCurrent'])
 2019-03-12 16:44:29,117 - sqlite_db - INFO - data len: 4, keys: dict_keys(['id', 'remotePWM', 'motorCurrent', 'feederCurrent'])
+2019-03-13 19:28:41,922 - sqlite_db - INFO - db path: chinook.db
+2019-06-13 23:31:36,959 - sqlite_db - INFO - db path: sampl.db
+2019-06-13 23:31:53,375 - sqlite_db - INFO - db path: sampl.db
+2019-06-13 23:32:49,420 - sqlite_db - INFO - db path: sampl.db
+2019-06-13 23:33:19,865 - sqlite_db - INFO - db path: sampl.db
+2019-06-13 23:34:13,836 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\Siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such table: SensorData
+2019-06-13 23:41:09,270 - sqlite_db - ERROR - from>>excecutescript
+Traceback (most recent call last):
+  File "C:\Users\Siddhartha\Desktop\sql-graphviz\src\sql\sqlite_db.py", line 76, in excecutescript
+    data = np.array(cur.execute(script).fetchall())
+sqlite3.OperationalError: no such table: SensorData

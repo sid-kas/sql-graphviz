@@ -20,3 +20,5 @@
 2019-03-12 16:43:51,028 - Queries - INFO - b'SELECT sessionID, COUNT(*) as count,            (SELECT timeStamp FROM Sessions WHERE sessionID = SensorData.sessionID) as timeStamp    FROM SensorData    GROUP BY sessionID    HAVING COUNT(sessionID)> 100'
 2019-03-12 16:43:56,567 - Queries - INFO - b'select id,remotePWM,motorCurrent,feederCurrent from SensorData \n'
 2019-03-12 16:44:28,418 - Queries - INFO - b'select id,remotePWM,motorCurrent,feederCurrent from SensorData where motorCurrent>0\n'
+2019-06-13 23:34:13,835 - Queries - INFO - b'select id, sessionID,depth, outputPWM,motorCurrent,feederCurrent from SensorData where motorCurrent>0;\n'
+2019-06-13 23:41:09,270 - Queries - INFO - b'select id, sessionID,depth, outputPWM,motorCurrent,feederCurrent from SensorData where motorCurrent>0;\n'
